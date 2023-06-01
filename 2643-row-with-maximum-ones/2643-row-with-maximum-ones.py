@@ -1,5 +1,14 @@
 class Solution:
     def rowAndMaximumOnes(self, mat: List[List[int]]) -> List[int]:
+        ones = 0 
+        index = 0
+        for i, row in enumerate(mat):
+            c = row.count(1)
+            if ones < c:
+                ones = c
+                index = i
+        return [index,ones]
+    '''
         res = []
         count = 0
         for i in mat:
@@ -20,3 +29,4 @@ class Solution:
                 mxindex = index
         return [mxindex,mxo]
 
+'''
