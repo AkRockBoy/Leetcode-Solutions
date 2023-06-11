@@ -2,15 +2,11 @@
 
 class Solution:
     def update(self, arr , n , updates, k):
-        prefixsum = [0] * (n + 1)
-        for i in range(k):
-            prefixsum[updates[i]] += 1
+        for i in range(0,k):
+            arr[updates[i]-1] += 1
         
-        for i in range(1, n + 1):
-            prefixsum[i] += prefixsum[i - 1]
-        
-        for i in range(n):
-            arr[i] = prefixsum[i + 1]
+        for i in range (1,n):
+            arr[i] += a[i-1]
 
                 
         
